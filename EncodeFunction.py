@@ -64,48 +64,28 @@ def EncodingBase():
         CountCharW = MessageSplit.count('w')
         Wposition = MessageSplit.index('w')    
         print(Wposition)
-       # RMposition = MessageSplit.remove(Wposition, CharW)
-        del MessageSplit[Wposition]
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
 
-        OutputTotal += 48
+        del MessageSplit[Wposition] #new method
+
+        OutputTotal += 46
         INTposition = MessageReOrder.insert(Wposition, CharW)
 
         try:
             for CountCharW in range(0, MessageCount):
                 Wposition = MessageSplit.index('w')
-                OutputTotal += 48
+                OutputTotal += 46
                 RMposition =  MessageSplit.remove(Wposition)
                 INTposition =  MessageReOrder.insert(Wposition, CharW)
         except:
             print("only one W found")
 
-
-        print(MessageReOrder)
-        
+            print(MessageReOrder)
 
 
-
-
-
-
-    if 'a' in MessageSplit:
-        CountCharW = MessageSplit.count('w')
-        OutputMessage.append(CharW)
-        OutputMessage.append(1)
-        OutputTotal += 48
-        print(OutputMessage)
-        print(OutputTotal)
-        print(CountCharW, "number of characters in string/word")
-
-    if 'w' in MessageSplit:
-        CountCharW = MessageSplit.count('w')
-        OutputMessage.append(CharW)
-        OutputMessage.append(1)
-        OutputTotal += 48
-        print(OutputMessage)
-        print(OutputTotal)
-        print(CountCharW, "number of characters in string/word")
-
+    
 
 EncodingBase()
     
