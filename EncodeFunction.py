@@ -5,13 +5,12 @@ import os
 import re 
 import array 
 
-#------------ TO-DO --------------
+#------------ TO-DO -------------
 
-#First start with encoding before decoding
-#Make a function to read the string/message
-#make sure the output is correct 
-#show total output in terminal/debug
-#add total counter 
+#add total counter on output message
+#add positive and negative
+#add sections to characters in 3
+#make sections within array
 
 #---------------------------------
 
@@ -57,23 +56,33 @@ def EncodingBase():
     for i in range(0, MessageCount):
         MessageReOrder.append(InsertString)
 
-
     print(MessageSplit)
     print(MessageCount)
-   
-   if 'w' in MessageSplit:
+    print(MessageReOrder)
+
+    if 'w' in MessageSplit:
         CountCharW = MessageSplit.count('w')
         Wposition = MessageSplit.index('w')    
         print(Wposition)
-        MessageSplit.remove[Wposition]
+       # RMposition = MessageSplit.remove(Wposition, CharW)
+        del MessageSplit[Wposition]
+
         OutputTotal += 48
-        MessageReOrder.insert(Wposition, CharW)
-       
-        for CountCharW in MessageCount:
-            Wposition = MessageSplit.index('w')
-            OutputTotal += 48
-            MessageSplit.remove(Wposition)
-            MessageReOrder.insert(Wposition, CharW)
+        INTposition = MessageReOrder.insert(Wposition, CharW)
+
+        try:
+            for CountCharW in range(0, MessageCount):
+                Wposition = MessageSplit.index('w')
+                OutputTotal += 48
+                RMposition =  MessageSplit.remove(Wposition)
+                INTposition =  MessageReOrder.insert(Wposition, CharW)
+        except:
+            print("only one W found")
+
+
+        print(MessageReOrder)
+        
+
 
 
 
@@ -98,11 +107,6 @@ def EncodingBase():
         print(CountCharW, "number of characters in string/word")
 
 
-   
-
-
-
-    
 EncodingBase()
     
 
