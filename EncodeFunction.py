@@ -4,6 +4,7 @@ import time
 import os 
 import re 
 import array 
+import base64
 
 #------------ TO-DO -------------
 
@@ -44,7 +45,7 @@ CharY = 50
 CharZ = 52
 
 #--------------testing----------------
-TestMessage = "w"
+TestMessage = "wap"
 
 def EncodingBase():
     MessageSplit = list(TestMessage)
@@ -84,6 +85,83 @@ def EncodingBase():
 
             print(MessageReOrder)
 
+    if 'a' in MessageSplit:
+        CountCharA = MessageSplit.count('a')
+        Aposition = MessageSplit.index('a')    
+        print(Aposition)
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
+
+        del MessageSplit[Aposition] #new method
+
+        OutputTotal += 2
+        INTposition = MessageReOrder.insert(Aposition, CharA)
+
+        try:
+            for CountCharA in range(0, MessageCount):
+                Aposition = MessageSplit.index('a')
+                OutputTotal += 2
+                RMposition =  MessageSplit.remove(Aposition)
+                INTposition =  MessageReOrder.insert(Aposition, CharA)
+        except:
+            print("only one a found")
+
+            print(MessageReOrder)
+            
+            
+    
+    
+    
+    if 'p' in MessageSplit:
+        CountCharP = MessageSplit.count('p')
+        Pposition = MessageSplit.index('p')    
+        print(Aposition)
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
+
+        del MessageSplit[Aposition] #new method
+
+        OutputTotal += 32
+        INTposition = MessageReOrder.insert(Aposition, CharP)
+
+        try:
+            for CountCharP in range(0, MessageCount):
+                Aposition = MessageSplit.index('p')
+                OutputTotal += 32
+                RMposition =  MessageSplit.remove(Pposition)
+                INTposition =  MessageReOrder.insert(Pposition, CharP)
+        except:
+            print("only one p found")
+
+            print(MessageReOrder)
+            print("unflipped\n")
+            
+            
+            
+            
+    MessageReOrder.reverse()
+    
+    print(MessageReOrder)
+    print("flipped")
+    
+    INToutput = MessageReOrder.insert(0,OutputTotal)
+    print("with output total")
+    print(MessageReOrder)
+    
+    #get rid of all speech marks
+    
+    
+    SpeechCount = MessageReOrder.count(" \" \" ")    
+
+    for SpeechCount in range(0, SpeechCount):
+        MessageReOrder.remove(" \" \" ")
+        
+    print(MessageReOrder)
+    
+
+    
 
     
 
