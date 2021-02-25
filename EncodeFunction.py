@@ -46,7 +46,18 @@ CharY = 50
 CharZ = 52
 
 #--------------testing----------------
+#InputTestMessge = input("enter test message")
+#InputList = list(InputTestMessge)
+#InputCount = len(InputTestMessge)
+#print(InputTestMessge)
+#print(InputList)
+#print(InputCount)
+#use input for later testing
+
+
 TestMessage = "wap"
+
+#---------------------------------------
 
 def EncodingBase():
     MessageSplit = list(TestMessage)
@@ -171,13 +182,19 @@ def EncodingBase():
     
     print(MessageReOrder)
 
+    result = ' '.join(map(str, MessageReOrder))
+
     f = open('MessageOutput.txt' , 'w')
-    f.write('Encoded\n')
+    f.write('Encoded messsage\n')
     f.write (str(MessageReOrder))
-    f.write('\nUnEncoded\n')
+    f.write('\nUnEncoded messsage\n')
     f.write(TestMessage)
+    f.write('\nUnlisted message\n')
+    f.write(result)
 
     f.close()
+
+
 
     
 
