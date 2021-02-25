@@ -5,6 +5,7 @@ import os
 import re 
 import array 
 import base64
+from getpass import getpass
 
 #------------ TO-DO -------------
 
@@ -159,6 +160,13 @@ def EncodingBase():
         MessageReOrder.remove(" \" \" ")
         
     print(MessageReOrder)
+
+    f = open('MessageOutput.txt' , 'w')
+    f.write('Encoded\n')
+    f.write (str(MessageReOrder))
+
+    f.close()
+
     
 
     
