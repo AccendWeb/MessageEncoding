@@ -138,7 +138,12 @@ def EncodingBase():
 
             print(MessageReOrder)
             print("unflipped\n")
-            
+
+    
+
+    else:
+        print('either you have not input a character,interger or symbol')
+        sys.exit()
             
             
             
@@ -147,6 +152,8 @@ def EncodingBase():
     print(MessageReOrder)
     print("flipped")
     
+
+    MessageReOrder.insert(0, 'x')
     INToutput = MessageReOrder.insert(0,OutputTotal)
     print("with output total")
     print(MessageReOrder)
@@ -159,11 +166,16 @@ def EncodingBase():
     for SpeechCount in range(0, SpeechCount):
         MessageReOrder.remove(" \" \" ")
         
+
+    
+    
     print(MessageReOrder)
 
     f = open('MessageOutput.txt' , 'w')
     f.write('Encoded\n')
     f.write (str(MessageReOrder))
+    f.write('\nUnEncoded\n')
+    f.write(TestMessage)
 
     f.close()
 
