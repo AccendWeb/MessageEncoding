@@ -17,7 +17,7 @@ from getpass import getpass
 #---------------------------------
 
 #declare all base 2 characters
-
+#---------------characters---------------
 CharA = 2
 CharB = 4 
 CharC = 6
@@ -44,7 +44,62 @@ CharW = 46
 CharX = 48
 CharY = 50
 CharZ = 52
-
+#---------------symbols-----------------
+Sym1 = 54
+Sym2 = 56
+Sym3 = 58
+Sym4 = 60
+Sym5 = 62
+Sym6 = 64
+Sym7 = 66 
+Sym8 = 68
+Sym9 = 70
+Sym10 = 72
+Sym11 = 74
+Sym12 = 76
+Sym13 = 78
+Sym14 = 80
+Sym15 = 82
+Sym16 = 84
+Sym17 = 86
+Sym18 = 88
+Sym19 = 90
+Sym20 = 92
+Sym21 = 94
+Sym22 = 96 
+Sym23 = 98 
+Sym24 = 100
+Sym25 = 102
+Sym26 = 104
+Sym27 = 106
+Sym28 = 108
+Sym29 = 110
+Sym30 = 112 
+Sym32 = 114
+Sym33 = 116
+Sym34 = 118
+Sym35 = 120
+Sym36 = 122
+Sym37 = 124
+Sym38 = 126
+Sym39 = 128
+Sym40 = 130
+Sym41 = 132
+Sym42 = 134
+Sym43 = 136
+Sym44 = 138
+Sym46 = 140
+Sym48 = 142
+Sym50 = 144
+Sym52 = 146
+Sym54 = 148
+Sym56 = 150
+Sym58 = 152
+Sym60 = 154
+Sym62 = 156
+Sym64 = 158
+Sym66 = 160
+Sym68 = 162
 #--------------testing----------------
 #InputTestMessge = input("enter test message")
 #InputList = list(InputTestMessge)
@@ -73,30 +128,6 @@ def EncodingBase():
     print(MessageCount)
     print(MessageReOrder)
 
-    if 'w' in MessageSplit:
-        CountCharW = MessageSplit.count('w')
-        Wposition = MessageSplit.index('w')    
-        print(Wposition)
-      
-      #old method but keep for later
-      # RMposition = MessageSplit.remove(Wposition, CharW)
-
-        del MessageSplit[Wposition] #new method
-
-        OutputTotal += 46
-        INTposition = MessageReOrder.insert(Wposition, CharW)
-
-        try:
-            for CountCharW in range(0, MessageCount):
-                Wposition = MessageSplit.index('w')
-                OutputTotal += 46
-                RMposition =  MessageSplit.remove(Wposition)
-                INTposition =  MessageReOrder.insert(Wposition, CharW)
-        except:
-            print("only one W found")
-
-            print(MessageReOrder)
-
     if 'a' in MessageSplit:
         CountCharA = MessageSplit.count('a')
         Aposition = MessageSplit.index('a')    
@@ -120,37 +151,109 @@ def EncodingBase():
             print("only one a found")
 
             print(MessageReOrder)
-            
-            
+
     
-    
-    
-    if 'p' in MessageSplit:
-        CountCharP = MessageSplit.count('p')
-        Pposition = MessageSplit.index('p')    
-        print(Aposition)
+    if 'b' in MessageSplit:
+        CountCharB = MessageSplit.count('b')
+        Bposition = MessageSplit.index('b')    
+        print(Bposition)
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
+
+        del MessageSplit[Bposition] #new method
+
+        OutputTotal += 4
+        INTposition = MessageReOrder.insert(Bposition, CountCharB)
+
+        try:
+            for CountCharA in range(0, MessageCount):
+                Bposition = MessageSplit.index('b')
+                OutputTotal += 4
+                RMposition =  MessageSplit.remove(Bposition)
+                INTposition =  MessageReOrder.insert(Bposition, CharB)
+        except:
+            print("only one b found")
+
+            print(MessageReOrder)
+
+    if 'c' in MessageSplit:
+        CountCharC = MessageSplit.count('c')
+        Cposition = MessageSplit.index('c')    
+        print(Cposition)
       
       #old method but keep for later
       # RMposition = MessageSplit.remove(Wposition, CharW)
 
         del MessageSplit[Aposition] #new method
 
-        OutputTotal += 32
-        INTposition = MessageReOrder.insert(Aposition, CharP)
+        OutputTotal += 6
+        INTposition = MessageReOrder.insert(Cposition, CharC)
 
         try:
-            for CountCharP in range(0, MessageCount):
-                Aposition = MessageSplit.index('p')
-                OutputTotal += 32
-                RMposition =  MessageSplit.remove(Pposition)
-                INTposition =  MessageReOrder.insert(Pposition, CharP)
+            for CountCharC in range(0, MessageCount):
+                Aposition = MessageSplit.index('c')
+                OutputTotal += 6
+                RMposition =  MessageSplit.remove(Cposition)
+                INTposition =  MessageReOrder.insert(Cposition, CharC)
         except:
-            print("only one p found")
+            print("only one c found")
 
             print(MessageReOrder)
-            print("unflipped\n")
 
-    
+    if 'd' in MessageSplit:
+        CountCharD = MessageSplit.count('d')
+        Dposition = MessageSplit.index('d')    
+        print(Dposition)
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
+
+        del MessageSplit[Dposition] #new method
+
+        OutputTotal += 8
+        INTposition = MessageReOrder.insert(Dposition, CharD)
+
+        try:
+            for CountCharD in range(0, MessageCount):
+                Aposition = MessageSplit.index('d')
+                OutputTotal += 8
+                RMposition =  MessageSplit.remove(Dposition)
+                INTposition =  MessageReOrder.insert(Dposition, CharD)
+        except:
+            print("only one d found")
+
+            print(MessageReOrder)
+
+    if 'e' in MessageSplit:
+        CountCharE = MessageSplit.count('e')
+        Eposition = MessageSplit.index('e')    
+        print(Eposition)
+      
+      #old method but keep for later
+      # RMposition = MessageSplit.remove(Wposition, CharW)
+
+        del MessageSplit[Eposition] #new method
+
+        OutputTotal += 2
+        INTposition = MessageReOrder.insert(Eposition, CharE)
+
+        try:
+            for CountCharE in range(0, MessageCount):
+                Eposition = MessageSplit.index('e')
+                OutputTotal += 2
+                RMposition =  MessageSplit.remove(Eposition)
+                INTposition =  MessageReOrder.insert(Eposition, CharE)
+        except:
+            print("only one e found")
+
+            print(MessageReOrder)
+
+
+
+
+
+   
 
     else:
         print('either you have not input a character,interger or symbol')
