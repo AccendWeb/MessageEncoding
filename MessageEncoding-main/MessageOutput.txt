@@ -1,0 +1,6 @@
+Encoded messsage
+[30, 'x', 2, 4, 6, 8, 10]
+UnEncoded messsage
+abc
+Unlisted message
+30 x 2 4 6 8 10
